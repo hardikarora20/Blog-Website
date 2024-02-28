@@ -1,0 +1,17 @@
+<%- include("partials/header") -%>
+
+<h1>HOME</h1>
+
+<div class="font-handler">
+    <%= home %>
+</div>
+
+<% blogArray.forEach(currBlogPost => {%>
+    <h1><%= currBlogPost.title %></h1>
+    <%= currBlogPost.desc.substring(0, 100) + "..."; %>
+    <a href="/post/<%= currBlogPost.title %>">
+        Read More
+    </a>
+<% }) %>
+    
+<%- include("partials/footer") -%>
